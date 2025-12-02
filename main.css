@@ -1,0 +1,199 @@
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Use a clean, modern font */
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a0a0a0; /* Subtle hover effect */
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    border: 2px solid #333;
+}
+
+.btn:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #333;
+    border-color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* This should be replaced by a large background image from your portfolio */
+    background: url('placeholder-hero.jpg') no-repeat center center/cover;
+    color: #fff; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- Sections --- */
+section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* --- Portfolio Gallery --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 350px;
+    background-color: #ddd; /* Placeholder for images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* --- About Section --- */
+.about {
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px; /* Subtle image framing */
+}
+
+/* --- Contact Section --- */
+.contact {
+    background-color: #f0f0f0;
+}
+
+.contact p {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-content img {
+        margin-bottom: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
